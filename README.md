@@ -86,3 +86,15 @@ policy ACCEPT означає, що за замовчуванням (політи
   
 ![image](https://github.com/Anastasiiasyvak/Iptables-and-FTP-server-management/assets/119412566/1479cf1a-aa6c-4310-863b-50d600d280af)
 
+### d. Додайте користувача ftp_user з паролем MyFTPPass!
+
+![image](https://github.com/Anastasiiasyvak/Iptables-and-FTP-server-management/assets/119412566/00b11934-43fe-44ee-b38a-8c31f118a9f8)
+
+- додаємо користувача
+- вводимо нам потрібний пароль, MyFTPPass!
+
+![image](https://github.com/Anastasiiasyvak/Iptables-and-FTP-server-management/assets/119412566/f1521428-54cf-423d-95e8-411efa9daffd)
+
+- переконуємось, що користувач буд доданий, ми бачимо інформацію про нового користувача
+- входимо в систему, за допомогою користувача
+  

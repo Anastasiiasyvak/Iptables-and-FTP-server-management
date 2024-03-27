@@ -97,4 +97,14 @@ policy ACCEPT означає, що за замовчуванням (політи
 
 - переконуємось, що користувач буд доданий, ми бачимо інформацію про нового користувача
 - входимо в систему, за допомогою користувача
+
+  ### e. Додайте 2 файли 1.txt і 2.txt з рядком Hello World! у кожному, які мають бути доступні по ftp в /home/ftp_user.
+
+![image](https://github.com/Anastasiiasyvak/Iptables-and-FTP-server-management/assets/119412566/1a88c15c-7ee3-4ff2-9d65-97a358319cc8)
+
+- `su - ftp_user`
+- `cd ~` переходимо в домашній каталог ftp_user (хоча ми вже тут і знаходились)
+- `echo "Hello World!" > 1.txt` `echo "Hello World!" > 2.txt` створюємо файли 1.txt та 2.txt і записуємо туди контент hello world
+- `ls` перевіряємо чи ми успішно створили файлики
+- `exit` вийшли з облікового запису ftp_user
   

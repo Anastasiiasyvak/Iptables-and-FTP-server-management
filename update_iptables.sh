@@ -7,6 +7,9 @@ if [ ! -f "$credentials_file" ]; then
     exit 1
 fi
 
+# Я видаляю попередні правила iptables, щоб уникати дублювання
+iptables -D INPUT -p tcp --dport 21 -j ACCEPT 2>/dev/null
+
 echo "Enter authorization key for the connected IP address:"
 read -r authorization_key
 

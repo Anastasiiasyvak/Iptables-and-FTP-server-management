@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo apt-get update
-sudo apt-get install -y net-tools nmap vsftpd
+sudo apt-get install -y net-tools nmap vsftpd socat
 
 sudo iptables -A INPUT -p icmp --icmp-type 8 -j DROP
 
@@ -14,6 +14,8 @@ sudo touch /home/ftp_user/2.txt
 echo "Hello World!" | sudo tee /home/ftp_user/1.txt
 echo "Hello World!" | sudo tee /home/ftp_user/2.txt
 
+sudo chmod 755 /home/ftp_user
+
 IFS=',' read -r -a ip_addresses <<< "$1"
 for ip_address in "${ip_addresses[@]}"; do
   sudo iptables -A INPUT -s "$ip_address" -p tcp --dport 21 -j ACCEPT
@@ -22,4 +24,3 @@ sudo iptables -A INPUT -p tcp --dport 21 -j DROP
 
 sudo systemctl start vsftpd
 sudo systemctl enable vsftpd
-
